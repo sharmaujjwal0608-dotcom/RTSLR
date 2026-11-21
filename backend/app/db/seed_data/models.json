@@ -1,0 +1,58 @@
+[
+  {
+    "id": "legacy-asl-prototype",
+    "version": "1.0.0",
+    "name": "Legacy ASL fingerspelling prototype",
+    "signLanguage": "ASL",
+    "kind": "legacy_asl_prototype",
+    "input": "single_hand_static",
+    "scoreType": "classifier_score",
+    "validated": false,
+    "classCount": 26,
+    "description": "Hand-tuned rules for American Sign Language (ASL) letters A-Z, ported from the original single-page prototype. It is not Indian Sign Language.",
+    "limitations": [
+      "ASL, not ISL: it does not recognise Indian Sign Language.",
+      "Hand-tuned geometric rules, not a trained model; no documented evaluation exists.",
+      "Scores are rule scores, not probabilities or accuracy.",
+      "One hand, static handshapes only; letters that need movement are not handled as movement.",
+      "Not suitable for medical, legal, emergency or other high-stakes communication."
+    ]
+  },
+  {
+    "id": "experimental-isl-user-trained",
+    "version": "1.0.0",
+    "name": "Experimental ISL (trained by you in this browser)",
+    "signLanguage": "ISL",
+    "kind": "experimental_isl_user_trained",
+    "input": "single_or_dual_static",
+    "scoreType": "classifier_score",
+    "validated": false,
+    "classCount": 0,
+    "description": "Nearest-neighbour matching over samples that a user records in their own browser. It has no built-in classes: it only knows the signs that user recorded, and the samples never leave the device.",
+    "limitations": [
+      "Not a validated ISL model: no trained weights ship and no evaluation exists.",
+      "Recognises only the signs the current user recorded, as that user performed them.",
+      "The class count is 0 on the server because classes exist only in the browser of the person who recorded them.",
+      "Scores are similarity scores, not probabilities or accuracy.",
+      "Static signs only; signs that depend on movement are out of scope.",
+      "Not suitable for medical, legal, emergency or other high-stakes communication."
+    ]
+  },
+  {
+    "id": "simulator",
+    "version": "1.0.0",
+    "name": "Simulator (synthetic landmarks)",
+    "signLanguage": "ASL",
+    "kind": "simulator",
+    "input": "single_hand_static",
+    "scoreType": "classifier_score",
+    "validated": false,
+    "classCount": 0,
+    "description": "Feeds synthetic hand landmarks through the interface so it can be tried without a camera. It is a demonstration of the interface, not recognition.",
+    "limitations": [
+      "Output is generated, not recognised from a person signing.",
+      "Says nothing about recognition quality for any sign language.",
+      "The class count is recorded as 0 because the simulator has no trained classes."
+    ]
+  }
+]

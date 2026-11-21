@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+# Run outputs and datasets are never committed: they may contain personal data
+# (landmarks of identifiable people) or unreviewed results.
+runs/
+data/*
+!data/manifest.template.json
+!data/README.md

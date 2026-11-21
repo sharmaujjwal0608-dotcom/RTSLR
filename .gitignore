@@ -14,4 +14,3 @@ playwright-report/
 !.env.example
 .pytest_cache/
 *.tsbuildinfo
-

@@ -1,0 +1,7 @@
+# NOT INSTALLED. Needed only for preprocessing/extract_landmarks.py (image/video -> landmarks).
+# That script has not been executed in this project. Versions are not pinned because none has
+# been tested here: pin them, in a separate environment, when the first extraction is run, and
+# record the versions in the model card. Use the same hand_landmarker.task file as the browser.
+-r requirements.txt
+mediapipe
+opencv-python

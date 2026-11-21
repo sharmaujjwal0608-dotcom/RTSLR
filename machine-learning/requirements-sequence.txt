@@ -1,0 +1,5 @@
+# NOT INSTALLED. Needed only for training/train_sequence.py (dynamic signs, GRU / temporal CNN).
+# That script has not been executed in this project and no sequence data exists. Versions are
+# not pinned because none has been tested here.
+-r requirements.txt
+torch

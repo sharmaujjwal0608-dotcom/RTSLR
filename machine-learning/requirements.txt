@@ -1,0 +1,7 @@
+# Installed in machine-learning/.venv (Python 3.12). Everything that has actually been run uses only these.
+numpy==2.5.5
+scipy==1.18.1
+scikit-learn==1.9.1
+joblib==1.6.0
+threadpoolctl==3.8.0
+pytest==9.2.0

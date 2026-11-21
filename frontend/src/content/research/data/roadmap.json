@@ -1,0 +1,98 @@
+[
+  {
+    "id": "rm-01",
+    "phase": "Phase 0 - Research foundation",
+    "title": "Source audit and research notes",
+    "description": "Verify the legacy prototype's citations, survey ISL datasets and published results, and record assumptions. Output: RESEARCH_NOTES.md, dataset-evaluation.md and the JSON files in research/data.",
+    "status": "done",
+    "dependsOn": []
+  },
+  {
+    "id": "rm-02",
+    "phase": "Phase 0 - Research foundation",
+    "title": "Close open verification gaps",
+    "description": "Re-open the sources that could not be read (Mendeley Data records, ISLRTC dictionary site, data.gov.in catalogue, Kaggle pages, FDMSE-ISL download page) from a network that can reach them, and record licences exactly as stated.",
+    "status": "planned",
+    "dependsOn": ["rm-01"]
+  },
+  {
+    "id": "rm-03",
+    "phase": "Phase 1 - Static ISL data",
+    "title": "ISL sign inventory with a fluent signer",
+    "description": "Fix the class list for the first experiment (letters and digits), marking each sign as one-handed, two-handed, or motion-dependent, checked against the ISLRTC dictionary and reviewed by a fluent ISL signer.",
+    "status": "planned",
+    "dependsOn": ["rm-01"]
+  },
+  {
+    "id": "rm-04",
+    "phase": "Phase 1 - Static ISL data",
+    "title": "Consent-based landmark data collection",
+    "description": "Collect MediaPipe landmark samples (not raw video) for the static inventory from multiple signers with informed consent, storing an anonymous signer ID with every sample so signer-aware splits are possible.",
+    "status": "planned",
+    "dependsOn": ["rm-03"]
+  },
+  {
+    "id": "rm-05",
+    "phase": "Phase 1 - Static ISL data",
+    "title": "Dual-hand feature extractor",
+    "description": "Implement and unit-test the normalisation and coordinated dual-hand feature vector shared by training and browser inference. The browser extractor for schema rtslr-features-1 (63-D per hand, 156-D for two hands, docs/MODEL_CONTRACTS.md) exists in frontend/src/features/tracking/features.ts. Still open: comparing it with the 158-value dualhand-v1 proposal in RESEARCH_NOTES.md (EXP-004). No experiment has evaluated either layout.",
+    "status": "in_progress",
+    "dependsOn": ["rm-01"]
+  },
+  {
+    "id": "rm-06",
+    "phase": "Phase 2 - Static recognition experiments",
+    "title": "EXP-001 detection feasibility on two-handed signs",
+    "description": "Measure how often MediaPipe returns both hands for each two-handed ISL sign, before any classifier work.",
+    "status": "planned",
+    "dependsOn": ["rm-04"]
+  },
+  {
+    "id": "rm-07",
+    "phase": "Phase 2 - Static recognition experiments",
+    "title": "EXP-002 to EXP-004 static classifier experiments",
+    "description": "Train k-NN and MLP baselines on the dual-hand features, compare random and signer-independent protocols, and run the feature ablation. Results go to rtslr-experiments.json only after they are actually run.",
+    "status": "planned",
+    "dependsOn": ["rm-04", "rm-05", "rm-06"]
+  },
+  {
+    "id": "rm-08",
+    "phase": "Phase 2 - Static recognition experiments",
+    "title": "EXP-005 browser latency measurement",
+    "description": "Measure end-to-end per-frame latency and frame rate of landmarking plus classification in target browsers and devices.",
+    "status": "planned",
+    "dependsOn": ["rm-05"]
+  },
+  {
+    "id": "rm-09",
+    "phase": "Phase 3 - Dynamic signs",
+    "title": "Sequence model baseline on a public word-level ISL dataset",
+    "description": "Extract landmark sequences from a permissively licensed word-level dataset (INCLUDE-50 is the leading candidate) and train a small sequence model, reusing the dataset's official split and reporting the protocol.",
+    "status": "planned",
+    "dependsOn": ["rm-07"]
+  },
+  {
+    "id": "rm-10",
+    "phase": "Phase 3 - Dynamic signs",
+    "title": "Motion-dependent letters and sign segmentation",
+    "description": "Handle letters that need motion and decide how sign boundaries are detected in a live stream.",
+    "status": "planned",
+    "dependsOn": ["rm-09"]
+  },
+  {
+    "id": "rm-11",
+    "phase": "Phase 4 - Beyond the hands",
+    "title": "Body and face cues",
+    "description": "Evaluate adding pose and face landmarks for signs whose meaning depends on location on the body or on non-manual features, and measure the browser cost.",
+    "status": "planned",
+    "dependsOn": ["rm-09"]
+  },
+  {
+    "id": "rm-12",
+    "phase": "Phase 4 - Beyond the hands",
+    "title": "Deaf community review",
+    "description": "Have fluent ISL signers review the sign inventory, the recognition behaviour and the wording of every accuracy claim before public release.",
+    "status": "planned",
+    "dependsOn": ["rm-07"]
+  }
+]

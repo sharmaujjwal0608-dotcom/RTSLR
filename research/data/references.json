@@ -1,0 +1,222 @@
+[
+  {
+    "id": "ref-mediapipe-hand-landmarker-docs",
+    "title": "Hand landmarks detection guide (MediaPipe Hand Landmarker)",
+    "authors": ["Google AI Edge"],
+    "year": null,
+    "venue": "Google AI Edge documentation",
+    "url": "https://developers.google.com/edge/mediapipe/solutions/vision/hand_landmarker",
+    "summary": "Official task documentation. The model bundle is a palm detector plus a hand landmark model that outputs 21 keypoints per hand, handedness, image-normalised landmarks (x, y in [0,1], z relative to the wrist) and world landmarks in metres with the origin at the hand's geometric centre. numHands defaults to 1; the three confidence thresholds default to 0.5. The page states the landmark model was trained on about 30K real-world images plus synthetic hands and lists a Pixel 6 latency of 17.12 ms (CPU) / 12.27 ms (GPU).",
+    "verified": true,
+    "verificationNote": "Page opened 2026-11-21 (ai.google.dev URL redirects to developers.google.com). All listed facts read from the page. The Pixel 6 latency is a phone benchmark, not a browser benchmark."
+  },
+  {
+    "id": "ref-mediapipe-hand-landmarker-web",
+    "title": "Hand landmarks detection guide for Web",
+    "authors": ["Google AI Edge"],
+    "year": null,
+    "venue": "Google AI Edge documentation",
+    "url": "https://developers.google.com/edge/mediapipe/solutions/vision/hand_landmarker/web_js",
+    "summary": "Web (JavaScript) guide for @mediapipe/tasks-vision. Web running modes are IMAGE and VIDEO only; the page says web tasks run synchronously and recommends VIDEO mode driven by requestAnimationFrame for live camera input. WASM assets are loaded with FilesetResolver.forVisionTasks; delegate \"GPU\" can be set in baseOptions. Handedness refers to the subject's hand, so a mirrored image inverts the labels.",
+    "verified": true,
+    "verificationNote": "Page opened 2026-11-21. The page does not state browser frame rates and does not describe CPU fallback behaviour."
+  },
+  {
+    "id": "ref-zhang-2020-mediapipe-hands",
+    "title": "MediaPipe Hands: On-device Real-time Hand Tracking",
+    "authors": ["Fan Zhang", "Valentin Bazarevsky", "Andrey Vakunov", "Andrei Tkachenka", "George Sung", "Chuo-Ling Chang", "Matthias Grundmann"],
+    "year": 2020,
+    "venue": "arXiv preprint arXiv:2006.10214",
+    "url": "https://arxiv.org/abs/2006.10214",
+    "summary": "Describes the two-model pipeline (palm detector, then hand landmark model) that predicts a hand skeleton from a single RGB camera and runs in real time on mobile GPUs.",
+    "verified": true,
+    "verificationNote": "arXiv abstract page opened 2026-11-21. Only the abstract was read; it contains no accuracy or frame-rate figures."
+  },
+  {
+    "id": "ref-kumar-2023-mediapipe-cnn-asl",
+    "title": "Mediapipe and CNNs for Real-Time ASL Gesture Recognition",
+    "authors": ["Rupesh Kumar", "Ashutosh Bajpai", "Ayush Sinha", "S. K. Singh"],
+    "year": 2023,
+    "venue": "arXiv preprint arXiv:2305.05296",
+    "url": "https://arxiv.org/abs/2305.05296",
+    "summary": "ASL alphabet (26 classes, A-Z) recognition from MediaPipe hand landmarks. Features are 21 landmarks re-centred and scaled, flattened to a 42-input network; 4,500 images per class; 80/20 train/test split. Abstract reports 99.95% accuracy.",
+    "verified": true,
+    "verificationNote": "arXiv abstract page and full PDF opened 2026-11-21. The abstract and conclusion say 99.95%, while the results section says 100% test accuracy and the classification report shows 1.00; the paper is internally inconsistent. The arXiv listing shows three authors; the PDF lists a fourth (S. K. Singh). The split is a random 80/20 split; signer identity is not discussed. Not peer reviewed (preprint)."
+  },
+  {
+    "id": "ref-owo-ai-xgboost-asl",
+    "title": "Owo AI: asl-sign-detection-mediapipe-rf (GitHub repository)",
+    "authors": ["Valentinetemi (GitHub user)"],
+    "year": null,
+    "venue": "GitHub repository (not peer reviewed)",
+    "url": "https://github.com/Valentinetemi/asl-sign-detection-mediapipe-rf",
+    "summary": "Open-source ASL fingerspelling project. 63 features (21 keypoints x 3) from MediaPipe, 28 classes (A-Z, space, del), Kaggle ASL Alphabet dataset (87,000 raw images, about 69,273 samples after landmark extraction), stratified 80/20 split. README reports XGBoost on normalised landmarks 98.43%; Random Forest 97.64% (raw) and 98.17% (normalised). Code licence MIT.",
+    "verified": true,
+    "verificationNote": "Repository page opened 2026-11-21. Numbers are self-reported in a README, with no paper. The README says 'normalized landmarks'; the specific phrase 'wrist-normalized' used by the legacy prototype was not confirmed in the text read."
+  },
+  {
+    "id": "ref-kulkarni-2026-isl-rf",
+    "title": "Real-Time Indian Sign Language Alphabet Recognition Using MediaPipe Hand Landmarks and Random Forest Classification",
+    "authors": ["Saniya Kulkarni", "Shravani Joshi", "Priyanshi Gove", "Achala Deshmukh"],
+    "year": 2026,
+    "venue": "International Research Journal of Modernization in Engineering Technology and Science (IRJMETS), Vol. 08, Issue 06, June 2026",
+    "url": "https://www.irjmets.com/upload_newfiles/irjmets80600164472/paper_file/irjmets80600164472.pdf",
+    "summary": "ISL manual alphabet (26 classes, A-Z) from MediaPipe Hands landmarks. 126-D wrist-relative feature vector for up to two hands (zero-padded when one hand is present). 31,200 webcam images (1,200 per letter); landmarks detected in 29,871 (95.7%); 3x landmark augmentation to 119,484 samples; stratified 80/20 split; 300-tree Random Forest reaches 98.12% on 23,897 test samples. Lowest detection rates for H, Z, X, V; lowest F1 for C, M, N.",
+    "verified": true,
+    "verificationNote": "Full 10-page PDF opened and read 2026-11-21. The paper states the 80/20 split is applied to the 119,484 augmented samples, so augmented copies of one source image can fall in both train and test; the paper does not state the number of signers and does not report a signer-independent result. The paper states no formal latency profiling was performed. The dataset is not published."
+  },
+  {
+    "id": "ref-alsharif-2025-yolov11-asl",
+    "title": "Real-Time American Sign Language Interpretation Using Deep Learning and Keypoint Tracking",
+    "authors": ["Bader Alsharif", "Easa Alalwany", "Ali Ibrahim", "Imad Mahgoub", "Mohammad Ilyas"],
+    "year": 2025,
+    "venue": "Sensors (MDPI), 25(7), 2138",
+    "url": "https://www.mdpi.com/1424-8220/25/7/2138",
+    "summary": "ASL alphabet (26 classes) detection combining MediaPipe keypoints with a YOLOv11 detector. Dataset of 130,000 images, split 80/10/10. Reports precision 0.985, recall 0.981, mAP@0.5 0.982, mAP@0.5-0.95 0.933.",
+    "verified": true,
+    "verificationNote": "The MDPI URL returned HTTP 403 to automated fetching on 2026-11-21. Verified instead from the open-access PubMed Central copy of the same article (https://pmc.ncbi.nlm.nih.gov/articles/PMC11991612/, DOI 10.3390/s25072138), which contains the 130,000-image sentence and the Table 3 metrics. The data are stated as available on request, not public. mAP is a detection metric and is not comparable with classification accuracy."
+  },
+  {
+    "id": "ref-sundar-2022-mediapipe-lstm-asl",
+    "title": "American Sign Language Recognition for Alphabets Using MediaPipe and LSTM",
+    "authors": ["B. Sundar", "T. Bagyammal"],
+    "year": 2022,
+    "venue": "Procedia Computer Science, vol. 215",
+    "url": "https://www.amrita.edu/publication/american-sign-language-recognition-for-alphabets-using-mediapipe-and-lstm/",
+    "summary": "ASL alphabet recognition (26 letters) using MediaPipe hand landmarks and an LSTM on a custom dataset; abstract reports 99% accuracy.",
+    "verified": true,
+    "verificationNote": "Verified at abstract level only, from the authors' institutional repository page opened 2026-11-21. The ScienceDirect full text (PII S1877050922021378) was not opened, so dataset size, split and evaluation protocol are unknown. This is the probable source of the unsourced 'MediaPipe + LSTM (ASL) 99.0' bar in the legacy prototype, but the prototype gives no citation, so that link is an inference."
+  },
+  {
+    "id": "ref-sridhar-2020-include",
+    "title": "INCLUDE: A Large Scale Dataset for Indian Sign Language Recognition",
+    "authors": ["Advaith Sridhar", "Rohith Gandhi Ganesan", "Pratyush Kumar", "Mitesh Khapra"],
+    "year": 2020,
+    "venue": "ACM Multimedia 2020 (MM '20), DOI 10.1145/3394171.3413528; dataset record on Zenodo",
+    "url": "https://zenodo.org/records/4010759",
+    "summary": "Word-level ISL video dataset: 263 word signs in 15 categories, about 0.27 million frames, 4,292 videos on Zenodo (paper reports 4,287), recorded with deaf students of St. Louis School for the Deaf, Chennai. INCLUDE-50 is a 50-sign subset. Record states best model accuracy of 94.5% on INCLUDE-50 and 85.6% on INCLUDE. Licence CC BY 4.0.",
+    "verified": true,
+    "verificationNote": "Zenodo record opened 2026-11-21; all listed facts are from that record. The ACM paper itself was not opened. The Zenodo record does not state the number of signers; the figure of 7 signers comes from comparison tables in ref-joshi-2024-isign and ref-patra-2024-hwgat-fdmse."
+  },
+  {
+    "id": "ref-joshi-2022-cislr",
+    "title": "CISLR: Corpus for Indian Sign Language Recognition",
+    "authors": ["Abhinav Joshi", "Ashwani Bhat", "Pradeep S", "Priya Gole", "Shashwat Gupta", "Shreyansh Agarwal", "Ashutosh Modi"],
+    "year": 2022,
+    "venue": "EMNLP 2022, pages 10357-10366",
+    "url": "https://aclanthology.org/2022.emnlp-main.707/",
+    "summary": "Word-level ISL recognition corpus with a vocabulary of around 4,700 words. Baseline is a prototype-based one-shot learner using features learned from ASL.",
+    "verified": true,
+    "verificationNote": "ACL Anthology abstract page opened 2026-11-21. The abstract gives no accuracy figures and no video or signer counts; those counts (4,765 words, 7,050 videos, 71 signers) are taken from Table 1 of ref-joshi-2024-isign."
+  },
+  {
+    "id": "ref-joshi-2024-isign",
+    "title": "iSign: A Benchmark for Indian Sign Language Processing",
+    "authors": ["Abhinav Joshi", "Romit Mohanty", "Mounika Kanakanti", "Andesha Mangla", "Sudeep Choudhary", "Monali Barbate", "Ashutosh Modi"],
+    "year": 2024,
+    "venue": "Findings of ACL 2024 (arXiv:2407.05404)",
+    "url": "https://arxiv.org/abs/2407.05404",
+    "summary": "ISL-English benchmark with 118,228 video-sentence/phrase pairs (252 hours, about 40k vocabulary) sourced from YouTube ISL content (ISLRTC, ISH News, Deaf Enabled Foundation). Five tasks including translation, pose generation and word/gloss recognition. Its Table 1 compares isolated ISL datasets: CISLR 4,765 words / 7,050 videos / 71 signers; INCLUDE 263 / 4,287 / 7; ISL-CSLRT 186 / 700 / 7.",
+    "verified": true,
+    "verificationNote": "arXiv HTML full text opened 2026-11-21. The ACL Findings venue comes from the arXiv listing and ACL Anthology search results; the Anthology page itself was not opened. Total signer count for iSign is not stated."
+  },
+  {
+    "id": "ref-patra-2024-hwgat-fdmse",
+    "title": "Hierarchical Windowed Graph Attention Network and a Large Scale Dataset for Isolated Indian Sign Language Recognition",
+    "authors": ["Suvajit Patra", "Arkadip Maitra", "Megha Tiwari", "K. Kumaran", "Swathy Prabhu", "Swami Punyeshwarananda", "Soumitra Samanta"],
+    "year": 2024,
+    "venue": "arXiv preprint arXiv:2407.14224",
+    "url": "https://arxiv.org/abs/2407.14224",
+    "summary": "Introduces FDMSE-ISL (40,033 videos, 2,002 words, 20 deaf signers, 10 male and 10 female) and a keypoint-based graph attention model (HWGAT). Uses a signer-independent split (10 train / 2 validation / 8 test signers, no overlap). Reports top-1 93.86% on FDMSE-ISL and 97.67% on INCLUDE.",
+    "verified": true,
+    "verificationNote": "arXiv abstract page and v2 HTML full text opened 2026-11-21. Preprint; peer-review status not checked. The paper says the INCLUDE result uses the dataset's provided partitions and does not say whether those are signer-independent."
+  },
+  {
+    "id": "ref-selvaraj-2021-openhands",
+    "title": "OpenHands: Making Sign Language Recognition Accessible with Pose-based Pretrained Models across Languages",
+    "authors": ["Prem Selvaraj", "Gokul NC", "Pratyush Kumar", "Mitesh Khapra"],
+    "year": 2021,
+    "venue": "arXiv preprint arXiv:2110.05877",
+    "url": "https://arxiv.org/abs/2110.05877",
+    "summary": "Library and pose datasets for word-level sign recognition in six sign languages including Indian. Trains four pose-based isolated sign recognition models and reports that self-supervised pretraining on unlabelled Indian-SL pose data helps in low-resource settings.",
+    "verified": true,
+    "verificationNote": "arXiv abstract page opened 2026-11-21. Only the abstract was read; no accuracy figures are quoted from this source."
+  },
+  {
+    "id": "ref-shenoy-2018-isl-realtime",
+    "title": "Real-time Indian Sign Language (ISL) Recognition",
+    "authors": ["Kartik Shenoy", "Tejas Dastane", "Varun Rao", "Devendra Vyavaharkar"],
+    "year": 2018,
+    "venue": "9th International Conference on Computing, Communication and Networking Technologies (ICCCNT), 2018; arXiv:2108.10970",
+    "url": "https://arxiv.org/abs/2108.10970",
+    "summary": "Pre-MediaPipe ISL system: skin-colour segmentation, grid-based features, k-NN for 33 static hand poses and HMM chains for 12 gestures. Abstract reports 99.7% for static poses and 97.23% for gestures.",
+    "verified": true,
+    "verificationNote": "arXiv abstract page opened 2026-11-21. Only the abstract was read; evaluation protocol and number of signers were not checked."
+  },
+  {
+    "id": "ref-pal-2023-signer-overlap",
+    "title": "On the Importance of Signer Overlap for Sign Language Detection",
+    "authors": ["Abhilash Pal", "Stephan Huber", "Cyrine Chaabani", "Alessandro Manzotti", "Oscar Koller"],
+    "year": 2023,
+    "venue": "arXiv preprint arXiv:2303.10782",
+    "url": "https://arxiv.org/abs/2303.10782",
+    "summary": "Argues that benchmarks with the same signers in train and test give over-optimistic results. Removing signer overlap gave a relative accuracy decrease of 4.17% on the DGS corpus and 6.27% on Signing in the Wild; proposes partitions without signer overlap.",
+    "verified": true,
+    "verificationNote": "arXiv abstract page opened 2026-11-21. The task is sign language detection (is someone signing), not sign recognition, and the corpora are not ISL; it is cited for the evaluation principle only."
+  },
+  {
+    "id": "ref-kirandevraj-2025-isl-fingerspelling",
+    "title": "Continuous Fingerspelling Dataset for Indian Sign Language",
+    "authors": ["Kirandevraj R", "Vinod K. Kurmi", "Vinay P. Namboodiri", "C. V. Jawahar"],
+    "year": 2025,
+    "venue": "Workshop on Sign Language Processing (WSLP) at IJCNLP-AACL 2025, pages 33-38",
+    "url": "https://aclanthology.org/2025.wslp-main.6",
+    "summary": "Continuous ISL fingerspelling dataset: 1,308 segments from 499 ISH News videos, 70.85 minutes, 14,814 characters. A ByT5-small baseline reaches 82.91% character error rate after fine-tuning, which shows the task is far from solved.",
+    "verified": true,
+    "verificationNote": "ACL Anthology page and the project page (https://kirandevraj.github.io/ISL-Fingerspelling/) opened 2026-11-21. Only the abstract was read for the results."
+  },
+  {
+    "id": "ref-nios-isl-history",
+    "title": "The History of ISL: Its Origin, Development and Relationship with Other Signed and Spoken Languages (Indian Sign Language course 230, Module 1, Lesson 2)",
+    "authors": ["National Institute of Open Schooling (NIOS)"],
+    "year": null,
+    "venue": "NIOS Secondary Course material",
+    "url": "https://www.nios.ac.in/media/documents/230-ISL/Ch-2.pdf",
+    "summary": "Government course material. States that ISL was developed by the Indian deaf community and not borrowed from another country; that ISL two-handed fingerspelling is similar to that of British Sign Language with only minor differences such as A, E, I, O, U; that apart from fingerspelling, ISL signs differ significantly from BSL; and that International Sign and ASL influence some current ISL usage.",
+    "verified": true,
+    "verificationNote": "PDF pages 13-18 opened and read 2026-11-21. Educational material, not a peer-reviewed linguistic study; publication year is not printed on the pages read."
+  },
+  {
+    "id": "ref-wikipedia-ipsl",
+    "title": "Indo-Pakistani Sign Language",
+    "authors": ["Wikipedia contributors"],
+    "year": null,
+    "venue": "Wikipedia (tertiary source)",
+    "url": "https://en.wikipedia.org/wiki/Indo-Pakistani_Sign_Language",
+    "summary": "States that most signers use fingerspelling based on BSL fingerspelling, lists regional varieties (Bangalore-Madras, Bombay, Calcutta, Delhi and others), and describes non-manual features (mouth pattern, facial expression, body posture, head position, eye gaze) and the grammatical use of space.",
+    "verified": true,
+    "verificationNote": "First 100,000 characters of the page opened 2026-11-21. Tertiary source; signer population figures on the page carry a citation-needed tag and are not used by RTSLR."
+  },
+  {
+    "id": "ref-islrtc-home",
+    "title": "Indian Sign Language Research and Training Centre (ISLRTC) official website",
+    "authors": ["ISLRTC, Department of Empowerment of Persons with Disabilities, Ministry of Social Justice and Empowerment, Government of India"],
+    "year": null,
+    "venue": "Government website",
+    "url": "https://islrtc.nic.in/",
+    "summary": "ISLRTC is an autonomous organisation established on 28 September 2015 under the Department of Empowerment of Persons with Disabilities. The home page links to the ISL Dictionary as a dictionary website, YouTube channel, Google Drive folder and a data.gov.in catalogue entry.",
+    "verified": true,
+    "verificationNote": "Home page opened 2026-11-21. The home page does not state the number of dictionary terms or any reuse licence; it only says the content is owned by ISLRTC. The linked dictionary website (connection refused) and the data.gov.in catalogue (HTTP 403) could not be opened."
+  },
+  {
+    "id": "ref-elakkiya-2021-isl-csltr",
+    "title": "ISL-CSLTR: Indian Sign Language Dataset for Continuous Sign Language Translation and Recognition",
+    "authors": ["R. Elakkiya", "B. Natarajan"],
+    "year": 2021,
+    "venue": "Mendeley Data, V1, DOI 10.17632/kcmpdxky7p.1",
+    "url": "https://data.mendeley.com/datasets/kcmpdxky7p/1",
+    "summary": "Sentence-level ISL dataset. Search-result extracts of the record describe 700 annotated videos, 18,863 sentence-level frames and 1,036 word-level images for 100 spoken-language sentences performed by 7 signers.",
+    "verified": false,
+    "verificationNote": "Not verified. data.mendeley.com could not be opened from this environment on 2026-11-21 (TLS certificate chain error on every attempt). The description comes from web-search result extracts only; the licence field was not seen. The iSign paper's Table 1 independently lists 'ISL-CSLRT' as 186 words / 700 videos / 7 signers and cites Elakkiya and Natarajan (2021)."
+  }
+]

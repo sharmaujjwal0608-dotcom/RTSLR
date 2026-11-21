@@ -1,0 +1,37 @@
+{
+  "format": "rtslr-dataset-manifest-1",
+  "feature_schema": "rtslr-features-1",
+  "dataset_id": "<short id, e.g. isl-static-2027-pilot>",
+  "name": "<full dataset name>",
+  "sign_language": "ISL",
+  "synthetic": false,
+  "source": {
+    "description": "<what the data is and how it was recorded>",
+    "collected_by": "<organisation or people responsible>",
+    "url": ""
+  },
+  "licence": {
+    "name": "<licence name, e.g. CC BY 4.0, or the title of the written agreement>",
+    "terms_reference": "<URL or document reference for the exact terms>",
+    "permits_model_training": false,
+    "permits_model_distribution": false,
+    "attribution": ""
+  },
+  "consent": {
+    "obtained": false,
+    "description": "<how signers consented and to what>",
+    "covers_model_training": false,
+    "withdrawal_contact": "<who a signer contacts to withdraw their data>"
+  },
+  "signers": {
+    "count": 0,
+    "ids_are_anonymous": false
+  },
+  "label_inventory": {
+    "verified_by": "<the fluent ISL signer(s) or authority who checked every label>",
+    "classes": [
+      { "label": "<class label>", "hands": 2, "motion": "static" }
+    ]
+  },
+  "notes": ""
+}

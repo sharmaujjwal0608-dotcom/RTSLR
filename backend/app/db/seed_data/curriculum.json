@@ -1,0 +1,102 @@
+{
+  "signLanguage": "ISL",
+  "dictionarySourceName": "ISLRTC ISL Dictionary",
+  "categories": [
+    {
+      "id": "alphabet",
+      "titleEn": "Alphabet",
+      "titleHi": "वर्णमाला",
+      "descriptionEn": "The letters A to Z, used for fingerspelling names and words. Demonstrations are pending a verified source.",
+      "descriptionHi": "A से Z तक के अक्षर, जिनसे नाम और शब्दों की वर्तनी की जाती है। प्रदर्शन सत्यापित स्रोत मिलने तक लंबित हैं।",
+      "signs": [["A", null], ["B", null], ["C", null], ["D", null], ["E", null], ["F", null], ["G", null], ["H", null], ["I", null], ["J", null], ["K", null], ["L", null], ["M", null], ["N", null], ["O", null], ["P", null], ["Q", null], ["R", null], ["S", null], ["T", null], ["U", null], ["V", null], ["W", null], ["X", null], ["Y", null], ["Z", null]],
+      "lessons": [
+        {"id": "alphabet-a-i", "titleEn": "Letters A to I", "titleHi": "अक्षर A से I", "signs": ["A", "B", "C", "D", "E", "F", "G", "H", "I"]},
+        {"id": "alphabet-j-r", "titleEn": "Letters J to R", "titleHi": "अक्षर J से R", "signs": ["J", "K", "L", "M", "N", "O", "P", "Q", "R"]},
+        {"id": "alphabet-s-z", "titleEn": "Letters S to Z", "titleHi": "अक्षर S से Z", "signs": ["S", "T", "U", "V", "W", "X", "Y", "Z"]}
+      ]
+    },
+    {
+      "id": "numbers",
+      "titleEn": "Numbers",
+      "titleHi": "संख्याएँ",
+      "descriptionEn": "The digits 0 to 9. Demonstrations are pending a verified source.",
+      "descriptionHi": "0 से 9 तक के अंक। प्रदर्शन सत्यापित स्रोत मिलने तक लंबित हैं।",
+      "signs": [["0", "शून्य"], ["1", "एक"], ["2", "दो"], ["3", "तीन"], ["4", "चार"], ["5", "पाँच"], ["6", "छह"], ["7", "सात"], ["8", "आठ"], ["9", "नौ"]],
+      "lessons": [
+        {"id": "numbers-0-4", "titleEn": "Numbers 0 to 4", "titleHi": "संख्याएँ 0 से 4", "signs": ["0", "1", "2", "3", "4"]},
+        {"id": "numbers-5-9", "titleEn": "Numbers 5 to 9", "titleHi": "संख्याएँ 5 से 9", "signs": ["5", "6", "7", "8", "9"]}
+      ]
+    },
+    {
+      "id": "greetings",
+      "titleEn": "Greetings",
+      "titleHi": "अभिवादन",
+      "descriptionEn": "Words for meeting people and being polite. Demonstrations are pending a verified source.",
+      "descriptionHi": "लोगों से मिलने और शिष्टाचार के शब्द। प्रदर्शन सत्यापित स्रोत मिलने तक लंबित हैं।",
+      "signs": [["Hello", "नमस्ते"], ["Good morning", "सुप्रभात"], ["Good night", "शुभ रात्रि"], ["Welcome", "स्वागत"], ["Thank you", "धन्यवाद"], ["Please", "कृपया"], ["Sorry", "माफ़ कीजिए"], ["Goodbye", "अलविदा"]],
+      "lessons": [
+        {"id": "greetings-meeting", "titleEn": "Meeting people", "titleHi": "लोगों से मिलना", "signs": ["Hello", "Good morning", "Good night", "Welcome", "Goodbye"]},
+        {"id": "greetings-polite", "titleEn": "Polite words", "titleHi": "शिष्टाचार के शब्द", "signs": ["Thank you", "Please", "Sorry"]}
+      ]
+    },
+    {
+      "id": "everyday",
+      "titleEn": "Everyday",
+      "titleHi": "रोज़मर्रा",
+      "descriptionEn": "Common words for daily life. Demonstrations are pending a verified source.",
+      "descriptionHi": "रोज़ के जीवन के आम शब्द। प्रदर्शन सत्यापित स्रोत मिलने तक लंबित हैं।",
+      "signs": [["Yes", "हाँ"], ["No", "नहीं"], ["Help", "मदद"], ["Water", "पानी"], ["Food", "खाना"], ["Home", "घर"], ["Work", "काम"], ["Name", "नाम"], ["Friend", "दोस्त"], ["Good", "अच्छा"], ["Bad", "बुरा"], ["Money", "पैसा"]],
+      "lessons": [
+        {"id": "everyday-basics", "titleEn": "Basic words", "titleHi": "बुनियादी शब्द", "signs": ["Yes", "No", "Help", "Good", "Bad", "Name"]},
+        {"id": "everyday-needs", "titleEn": "Daily needs", "titleHi": "रोज़ की ज़रूरतें", "signs": ["Water", "Food", "Home", "Work", "Friend", "Money"]}
+      ]
+    },
+    {
+      "id": "family",
+      "titleEn": "Family",
+      "titleHi": "परिवार",
+      "descriptionEn": "Words for family members. Demonstrations are pending a verified source.",
+      "descriptionHi": "परिवार के सदस्यों के शब्द। प्रदर्शन सत्यापित स्रोत मिलने तक लंबित हैं।",
+      "signs": [["Family", "परिवार"], ["Mother", "माँ"], ["Father", "पिता"], ["Brother", "भाई"], ["Sister", "बहन"], ["Son", "बेटा"], ["Daughter", "बेटी"], ["Grandfather", "दादा"], ["Grandmother", "दादी"], ["Husband", "पति"], ["Wife", "पत्नी"], ["Child", "बच्चा"]],
+      "lessons": [
+        {"id": "family-close", "titleEn": "Close family", "titleHi": "निकट परिवार", "signs": ["Family", "Mother", "Father", "Brother", "Sister", "Son", "Daughter"]},
+        {"id": "family-wider", "titleEn": "Wider family", "titleHi": "बड़ा परिवार", "signs": ["Grandfather", "Grandmother", "Husband", "Wife", "Child"]}
+      ]
+    },
+    {
+      "id": "questions",
+      "titleEn": "Questions",
+      "titleHi": "प्रश्न",
+      "descriptionEn": "Question words. Demonstrations are pending a verified source.",
+      "descriptionHi": "प्रश्नवाचक शब्द। प्रदर्शन सत्यापित स्रोत मिलने तक लंबित हैं।",
+      "signs": [["What", "क्या"], ["Who", "कौन"], ["Where", "कहाँ"], ["When", "कब"], ["Why", "क्यों"], ["How", "कैसे"], ["Which", "कौन सा"], ["How many", "कितने"]],
+      "lessons": [
+        {"id": "questions-words", "titleEn": "Question words", "titleHi": "प्रश्नवाचक शब्द", "signs": ["What", "Who", "Where", "When", "Why", "How", "Which", "How many"]}
+      ]
+    },
+    {
+      "id": "time-and-days",
+      "titleEn": "Time and days",
+      "titleHi": "समय और दिन",
+      "descriptionEn": "Words for time and the days of the week. Demonstrations are pending a verified source.",
+      "descriptionHi": "समय और सप्ताह के दिनों के शब्द। प्रदर्शन सत्यापित स्रोत मिलने तक लंबित हैं।",
+      "signs": [["Today", "आज"], ["Tomorrow", "आने वाला कल"], ["Yesterday", "बीता हुआ कल"], ["Morning", "सुबह"], ["Evening", "शाम"], ["Night", "रात"], ["Week", "सप्ताह"], ["Month", "महीना"], ["Year", "साल"], ["Monday", "सोमवार"], ["Tuesday", "मंगलवार"], ["Wednesday", "बुधवार"], ["Thursday", "गुरुवार"], ["Friday", "शुक्रवार"], ["Saturday", "शनिवार"], ["Sunday", "रविवार"]],
+      "lessons": [
+        {"id": "time-words", "titleEn": "Time words", "titleHi": "समय के शब्द", "signs": ["Today", "Tomorrow", "Yesterday", "Morning", "Evening", "Night", "Week", "Month", "Year"]},
+        {"id": "time-days-of-week", "titleEn": "Days of the week", "titleHi": "सप्ताह के दिन", "signs": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]}
+      ]
+    },
+    {
+      "id": "places",
+      "titleEn": "Places",
+      "titleHi": "स्थान",
+      "descriptionEn": "Words for places you visit. Demonstrations are pending a verified source.",
+      "descriptionHi": "आने-जाने की जगहों के शब्द। प्रदर्शन सत्यापित स्रोत मिलने तक लंबित हैं।",
+      "signs": [["School", "स्कूल"], ["Hospital", "अस्पताल"], ["Market", "बाज़ार"], ["Shop", "दुकान"], ["Office", "दफ़्तर"], ["Bank", "बैंक"], ["Temple", "मंदिर"], ["Railway station", "रेलवे स्टेशन"], ["Bus stop", "बस स्टॉप"], ["City", "शहर"], ["Village", "गाँव"], ["India", "भारत"]],
+      "lessons": [
+        {"id": "places-town", "titleEn": "Around town", "titleHi": "शहर में", "signs": ["School", "Hospital", "Market", "Shop", "Office", "Bank", "Temple"]},
+        {"id": "places-travel", "titleEn": "Travel and regions", "titleHi": "यात्रा और क्षेत्र", "signs": ["Railway station", "Bus stop", "City", "Village", "India"]}
+      ]
+    }
+  ]
+}
